@@ -9,18 +9,15 @@
     <title>Theme Color Test</title>    
 </head>
 <body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jscolor.js"></script>
+
     <div id="content">
-        <button id="0">Theme 0</button>
-        <button id="1">Theme 1</button>
-        <button id="2">Theme 2</button>
-        <button id="3">Theme 3</button>
-        <button id="4">Theme 4</button>
-        <button id="5">Theme 5</button>
-        <button id="6">Theme 6</button>
-        <button id="7">Theme 7</button>
+        <button id="colorPicker" class="jscolor {valueElement:'valueInput',value:'666666'}">Pick a color</button>
+        <button id="setTheme">Set theme</button>
+        <input id="valueInput" type="hidden">
     </div>
 
-    <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

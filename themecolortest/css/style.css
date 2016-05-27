@@ -13,14 +13,18 @@ button{
     font-family: 'Raleway', sans-serif;
 }
 
+#colorPicker{
+    width: 120px;
+    height: 40px;
+}
 /* Content */
 
 #content {
     background: #fff;
     border: solid 1px rgba(160, 160, 160, 0.3);
 
-    width: 360px;
-    height: 200px;
+    width: 358px;
+    height: 100px;
     text-align: center;
     margin: 20px auto;
 
