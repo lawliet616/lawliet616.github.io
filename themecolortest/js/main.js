@@ -17,7 +17,7 @@ $(document).ready(function($) {
     }
 
     setTheme.click(function(event) {
-       updateMetaThemeColor(valueInput.val());
+       updateMetaThemeColor("#"+valueInput.val());
        console.log(valueInput.val());
     });
 });
