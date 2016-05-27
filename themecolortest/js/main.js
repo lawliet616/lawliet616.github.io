@@ -59,3 +59,16 @@ $("#6").click(function(event) {
 $("#7").click(function(event) {
     updateMetaThemeColor(7);
 });
+
+
+var meta = document.querySelector('meta[name="theme-color"]');
+if (meta) {
+    var ob = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+            if (m.type === "attributes" && m.attributeName === "theme-color") {
+              console.log("theme changed " + m + " " + meta);
+            }
+        });
+    });
+    ob.observe(meta, {attributes:true});
+}
