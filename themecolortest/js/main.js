@@ -1,3 +1,27 @@
+var metas = document.getElementsByTagName('meta'); 
+var target;
+for (var i=0; i<metas.length; i++) { 
+    if (metas[i].getAttribute("name") == "theme-color") { 
+        target = metas[i];
+        break;
+    } 
+} 
+// create an observer instance
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    console.log(target.getAttribute("content"));
+    console.log("m",mutation);
+    console.log("m" + mutation.target.content);
+  });    
+});
+ 
+// configuration of the observer:
+var config = { attributes: true };
+ 
+// pass in the target node, as well as the observer options
+observer.observe(target, config);
+
 function updateMetaThemeColor(theme) {
     var themeColor;
     switch(theme){
@@ -29,10 +53,7 @@ function updateMetaThemeColor(theme) {
             themeColor = '#ffffff';
     }
 
-    //remove the current meta
-    $('meta[name=theme-color]').remove();
-    //add the new one
-    $('head').append('<meta name="theme-color" content="'+themeColor+'">');
+    target.setAttribute("content", themeColor);
 }
 
 $("#0").click(function(event) {
@@ -60,15 +81,3 @@ $("#7").click(function(event) {
     updateMetaThemeColor(7);
 });
 
-
-var meta = document.querySelector('meta[name="theme-color"]');
-if (meta) {
-    var ob = new MutationObserver(function(mutations) {
-        mutations.forEach(function(m) {
-            if (m.type === "attributes" && m.attributeName === "theme-color") {
-              console.log("theme changed " + m + " " + meta);
-            }
-        });
-    });
-    ob.observe(meta, {attributes:true});
-}
