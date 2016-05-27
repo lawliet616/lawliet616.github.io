@@ -1,8 +1,5 @@
 body {
     background-color: #f4f4f4;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    color: black;
 }
 
 button{
@@ -11,11 +8,19 @@ button{
     border-radius: 2px;
     color: white;
     font-family: 'Raleway', sans-serif;
+
 }
 
 #colorPicker{
+    width: 200px;
+    height: 80px;
+    font-size: 24px;
+}
+
+#setTheme{
     width: 120px;
     height: 40px;
+    font-size: 20px;
 }
 /* Content */
 
@@ -23,8 +28,8 @@ button{
     background: #fff;
     border: solid 1px rgba(160, 160, 160, 0.3);
 
-    width: 358px;
-    height: 100px;
+    width: 348px;
+    height: 180px;
     text-align: center;
     margin: 20px auto;
 
