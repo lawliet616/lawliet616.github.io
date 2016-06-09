@@ -16,8 +16,8 @@ $(document).ready(function($) {
       visibilityChange = "webkitvisibilitychange";
     }
 
-    console.log(hidden + " " + visibilitychange);
-    console.log(hidden, visibilitychange);
+    console.log(hidden + " " + visibilityChange);
+    console.log(hidden, visibilityChange);
 
     // If the page is hidden, pause the video;
     // if the page is shown, play the video
