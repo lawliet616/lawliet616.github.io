@@ -16,6 +16,7 @@ $(document).ready(function($) {
       visibilityChange = "webkitvisibilitychange";
     }
 
+    $("#content").text(hidden + " " + visibilityChange);
     console.log(hidden + " " + visibilityChange);
     console.log(hidden, visibilityChange);
 
