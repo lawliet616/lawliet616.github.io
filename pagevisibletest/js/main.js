@@ -1,4 +1,16 @@
 $(document).ready(function($) {
+    if (typeof console  != "undefined") 
+    if (typeof console.log != 'undefined')
+        console.olog = console.log;
+    else
+        console.olog = function() {};
+
+    console.log = function(message) {
+        console.olog(message);
+        $('#content').append('<p>' + message + '</p>');
+    };
+    console.error = console.debug = console.info =  console.log
+
     // Set the name of the hidden property and the change event for visibility
     var hidden, visibilityChange; 
 
@@ -15,10 +27,6 @@ $(document).ready(function($) {
       hidden = "webkitHidden";
       visibilityChange = "webkitvisibilitychange";
     }
-
-    $("#content").text(hidden + " " + visibilityChange);
-    console.log(hidden + " " + visibilityChange);
-    console.log(hidden, visibilityChange);
 
     // If the page is hidden, pause the video;
     // if the page is shown, play the video
