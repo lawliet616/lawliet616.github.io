@@ -13,8 +13,8 @@ $(document).ready(function($) {
         supported.text("NetworkInformation API supported");
         
         function changeHandler(){
-            type.text('Connection type: ' + connection.type);
             console.log(connection.type);
+            type.text('Connection type: ' + connection.type);
         }
 
         changeHandler();
