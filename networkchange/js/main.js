@@ -3,7 +3,7 @@ $(document).ready(function($) {
     console.log(navigator);
 
     var supported = $("#supported");
-    var type = $("#new-type");
+    var type = $("#type");
 
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || null;
 
