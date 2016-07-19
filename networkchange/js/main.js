@@ -1,6 +1,10 @@
 $(document).ready(function($) {
 
     var supported = $("#supported");
+    var oldtype = $("#old-type");
+    var bandwith = $("#old-bandwith");
+    var type = $("#new-type");
+
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || null;
 
     if(connection == null) {
@@ -8,12 +12,12 @@ $(document).ready(function($) {
     } else if ('metered' in connection) {
         supported.text("Old API supported");
 
-        var type = $("#old-type");
-        var bandwith = $("#old-bandwith");
+        oldtype.removeClass('hidden');
+        bandwith.removeClass('hidden');
         
         function changeHandler(){
             bandwith.text(connection.bandwidth);
-            type.text((connection.metered ? '' : 'not ') + 'metered');
+            oldtype.text((connection.metered ? '' : 'not ') + 'metered');
             console.log(connection.type);
         }
 
@@ -24,7 +28,7 @@ $(document).ready(function($) {
     } else {
         supported.text("API supported");
 
-        var type = $("#new-type");
+        type.removeClass('hidden');
         
         function changeHandler(){
             type.text(connection.type);
@@ -35,5 +39,5 @@ $(document).ready(function($) {
         connection.addEventListener('typechange', changeHandler);
         connection.addEventListener('change', changeHandler);
     }
-    
+
 });
