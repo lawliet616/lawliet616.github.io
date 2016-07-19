@@ -13,9 +13,6 @@ $(document).ready(function($) {
         supported.text("API not supported");
     } else if ('metered' in connection) {
         supported.text("Old API supported");
-
-        oldtype.removeClass('hidden');
-        bandwith.removeClass('hidden');
         
         function changeHandler(){
             bandwith.text(connection.bandwidth);
@@ -29,8 +26,6 @@ $(document).ready(function($) {
 
     } else {
         supported.text("API supported");
-
-        type.removeClass('hidden');
         
         function changeHandler(){
             type.text(connection.type);
