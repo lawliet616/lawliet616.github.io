@@ -1,5 +1,7 @@
 $(document).ready(function($) {
 
+    console.log(navigator);
+
     var supported = $("#supported");
     var oldtype = $("#old-type");
     var bandwith = $("#old-bandwith");
@@ -26,7 +28,6 @@ $(document).ready(function($) {
         connection.addEventListener('change', changeHandler);
 
     } else {
-        console.log(connection);
         supported.text("API supported");
 
         type.removeClass('hidden');
