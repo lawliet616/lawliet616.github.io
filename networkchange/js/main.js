@@ -26,6 +26,7 @@ $(document).ready(function($) {
         connection.addEventListener('change', changeHandler);
 
     } else {
+        console.log(connection);
         supported.text("API supported");
 
         type.removeClass('hidden');
