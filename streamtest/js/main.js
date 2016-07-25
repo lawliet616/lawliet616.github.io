@@ -5,7 +5,7 @@ $(document).ready(function($) {
     var message = $("#message");
 
     btnstart.click(function(event) {
-        StreamyAPI.onToogleStreaming();
+        StreamyAPI.onToggleStreaming();
         isRunning = !isRunning;
         toogleText(isRunning);
 
