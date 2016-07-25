@@ -1,22 +1,21 @@
 $(document).ready(function($) {
 
-    var isRunning = false;
     var btnstart = $("#button");
+    var btnstop = $("#button2");
     var message = $("#message");
 
     btnstart.click(function(event) {
-        StreamyAPI.onToggleStreaming();
-        isRunning = !isRunning;
-        toogleText(isRunning);
+        StreamyAPI.onStartStreaming();
+    });
 
+    btnstop.click(function(event) {
+        StreamyAPI.onStopStreaming();
     });
 
     $(window).on('onstreamystreamerror', function(e) {
         message.css('color', 'red');
         message.text(e.detail.message);
         console.error("Error: " + e.detail.message);
-        isRunning = false;
-        toogleText(isRunning);
     });
 
     $(window).on('onstreamystreamsuccess', function(e) {
@@ -24,14 +23,6 @@ $(document).ready(function($) {
         message.text(e.detail.message);
         console.log("Succes: " + e.detail.message);
     });
-        
-    function toogleText(b){
-        if(b){
-            btnstart.text('Stop')
-        } else {
-             btnstart.text('Start')
-        }
-    }
 
 });
 
