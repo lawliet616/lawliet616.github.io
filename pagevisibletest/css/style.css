@@ -1,6 +1,6 @@
 body {
     background-color: #f4f4f4;
-    font-family: 'Raleway', sans-serif;
+    font-family: Consolas, 'Raleway', sans-serif;
 }
 /* Content */
 
@@ -19,6 +19,5 @@ body {
 }
 
 .msg{
-    width: 200px;
     text-align: left;
 }
