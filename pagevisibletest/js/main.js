@@ -7,7 +7,7 @@ $(document).ready(function($) {
 
     console.log = function(message) {
         console.olog(message);
-        $('#content').append('<p>' + message + '</p>');
+        $('#content').append('<p class="msg">' + message + '</p>');
     };
     console.error = console.debug = console.info =  console.log
 
@@ -34,9 +34,9 @@ $(document).ready(function($) {
     // if the page is shown, play the video
     function handleVisibilityChange() {
       if (document[hidden]) {
-        console.log(getTime() + " Page is hidden");
+        console.log(getTime() + " hidden");
       } else {
-        console.log(getTime() + " Page is shown");
+        console.log(getTime() + " shown");
       }
     }
 

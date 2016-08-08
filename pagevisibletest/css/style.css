@@ -17,3 +17,8 @@ body {
     flex-direction: column;
     min-height: 1vh;
 }
+
+.msg{
+    width: 200px;
+    text-align: left;
+}
