@@ -11,6 +11,8 @@ $(document).ready(function($) {
     };
     console.error = console.debug = console.info =  console.log
 
+    var d = new Date();
+
     // Set the name of the hidden property and the change event for visibility
     var hidden, visibilityChange; 
 
@@ -32,9 +34,9 @@ $(document).ready(function($) {
     // if the page is shown, play the video
     function handleVisibilityChange() {
       if (document[hidden]) {
-        console.log("Page is hidden");
+        console.log(getTime() + " Page is hidden");
       } else {
-        console.log("Page is shown");
+        console.log(getTime() + " Page is shown");
       }
     }
 
@@ -45,5 +47,9 @@ $(document).ready(function($) {
     } else {
       // Handle page visibility change   
       document.addEventListener(visibilityChange, handleVisibilityChange, false);
+    }
+
+    function getTime(){
+      return d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     }
 });
