@@ -11,8 +11,6 @@ $(document).ready(function($) {
     };
     console.error = console.debug = console.info =  console.log
 
-    var d = new Date();
-
     // Set the name of the hidden property and the change event for visibility
     var hidden, visibilityChange; 
 
@@ -48,8 +46,9 @@ $(document).ready(function($) {
       // Handle page visibility change   
       document.addEventListener(visibilityChange, handleVisibilityChange, false);
     }
-
+    
     function getTime(){
+      var d = new Date();
       return d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     }
 });
