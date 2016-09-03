@@ -118,8 +118,7 @@
             fill: COLOR.STRAWBERRY
         });
 
-
-    document.body.appendChild(renderer.view);
+    document.getElementById("parent").appendChild(renderer.view);
 
     game.pivot.set(width / 2, height / 2);
     game.position.set(width / 2, height / 2);

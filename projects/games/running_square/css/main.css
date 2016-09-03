@@ -1,7 +1,7 @@
 .gameWrapper{
     text-align: center;
     margin: 0 auto;
-    width: 1302px;
+    width: 1312px;
 }
 
     .canvasWrapper {
@@ -14,9 +14,7 @@
 
         #canvas{
             border: 10px solid #F1D4AF;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            margin-left: -645px;
-            margin-top: -385px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
         }
