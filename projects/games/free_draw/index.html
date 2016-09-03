@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Free draw</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+            <h2>Free draw</h2>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div id="content">
+
+        <div class="gameWrapper">
+
+            <div class="canvasWrapper">
+                <canvas id="canvas" class="canvas" width="1280" height="720"></canvas>
+                <canvas id="tmp_canvas" class="canvas" width="1280" height="720"></canvas>
+            </div>
+
+            <div id="actions">
+                <button id="undo" class="action">Undo</button>
+                <button id="clear" class="action">Clear</button>
+                <button id="small" class="action">Small</button>
+                <button id="medium" class="action">Medium</button>
+                <button id="large" class="action">Large</button>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="js/lib/jquery-3.1.0.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

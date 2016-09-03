@@ -1,0 +1,22 @@
+.gameWrapper{
+    text-align: center;
+    margin: 0 auto;
+    width: 1302px;
+}
+
+    .canvasWrapper {
+        position: relative;
+        width: 1310px;
+        height: 734px;
+        background: #fff;
+        border: solid 1px rgba(160, 160, 160, 0.3);
+    }
+
+        #canvas{
+            border: 10px solid #F1D4AF;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -645px;
+            margin-top: -385px;
+        }

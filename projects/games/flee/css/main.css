@@ -1,0 +1,64 @@
+input{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+button{
+    background-color: #F1D4AF;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+    button:hover{
+        background-color: #69d2e7;
+    }
+
+.gameWrapper{
+    width: 1311px;
+    height: 751px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .canvasWrapper {
+        width: 1310px;
+        height: 750px;
+        background: #fff;
+        border: solid 1px rgba(160, 160, 160, 0.3);
+    }
+
+        #canvas {
+            margin: 5px;
+            background-color: white;
+            width: 1280px;
+            height: 720px;
+            border: 10px solid #F1D4AF;
+        }
+
+    .menu{
+        height: 300px;
+        width: 240px;
+        margin: -150px -120px;
+
+        position: absolute;
+        top: 45%;
+        left: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+        #btnStart{
+            width: 120px;
+            height: 50px;
+        }
+
+        .settings{
+
+        }

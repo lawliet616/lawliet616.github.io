@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Flee</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h2>Flee</h2>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../views/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div id="content">
+
+        <div class="gameWrapper">
+            <div class="canvasWrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="menu" id="menu">
+                <button id="btnStart">
+                    <h2>Play</h2>
+                </button>
+
+                <div class="settings">
+                    <label><p>Spawn time (ms)</p>
+                        <input type="text" value="3000" id="spawnTime"></label>
+                </div>
+
+                <div class="settings">
+                    <label><p>Gift rate (x)</p>
+                        <input type="text" value="1" id="giftRate"></label>
+                </div>
+
+                <div class="settings">
+                    <label><p>Option three</p>
+                        <input type="text" name="" value="coming soon"></label>
+                </div>
+
+                <button id="btnSave">
+                    <h4>Save</h4>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/text.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/chaser.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/gift.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

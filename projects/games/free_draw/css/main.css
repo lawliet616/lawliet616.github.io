@@ -1,0 +1,36 @@
+.gameWrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 1312px;
+}
+
+    .canvasWrapper {
+        position: relative;
+        width: 1310px;
+        height: 750px;
+        background: #fff;
+        border: solid 1px rgba(160, 160, 160, 0.3);
+    }
+
+        .canvas {
+            border: 10px solid black;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+    #actions {
+        width: 1310px;
+        background: #fff;
+        border: solid 1px rgba(160, 160, 160, 0.3);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+        .action {
+            width: 80px;
+            height: 25px;
+            margin: 5px 15px;
+        }
