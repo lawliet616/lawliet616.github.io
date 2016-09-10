@@ -540,7 +540,7 @@ game.draw = (function () {
         canvas = j_canvas[0];
         ctx = canvas.getContext('2d');
 
-        j_tmp_canvas = $("#tmp_canvas");
+        j_tmp_canvas = $("#tmp-canvas");
         tmp_canvas = j_tmp_canvas[0];
         tmp_ctx = tmp_canvas.getContext('2d');
 
