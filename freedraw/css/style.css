@@ -1,0 +1,265 @@
+body {
+    padding-top: 3.5em;
+    background-color: #f4f4f4;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+/* Header */
+
+header {
+    display: -webkit-flex;
+    display: flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+    left: 0;
+    height: 3.5em;
+    line-height: 3.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+header h2 {
+    letter-spacing: 6px;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+}
+
+header nav ul li:last-child {
+
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+header nav ul li a:hover {
+    color: #69d2e7;
+}
+
+#content {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.game-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 1312px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: #fff;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    border-radius: 10px;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+#tools {
+    margin-top: 5px;
+    width: 1280px;
+    height: 50px;
+    background: #fff;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    cursor: hand;
+}
+
+.tool-block {
+    padding: 0 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tool {
+    height: 24px;
+    width: 24px;
+
+    margin: 0 5px;
+    align-self: center;
+
+    background: no-repeat center;
+    background-size: contain;
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#undo {
+    background-size: 95% 95%;
+    background-image: url("../res/undo.png");
+}
+
+#clear {
+    background-image: url("../res/clear.png");
+}
+
+#pencil {
+    background-image: url("../res/pencil.png");
+}
+
+#eraser {
+    background-image: url("../res/eraser.png");
+}
+
+#paint-bucket {
+    background-image: url("../res/paint_bucket.png");
+}
+
+#eyedropper {
+    background-image: url("../res/eyedropper.png");
+}
+
+#line {
+    background-image: url("../res/line.png");
+}
+
+#circle {
+    background-image: url("../res/circle.png");
+}
+
+#triangle {
+    background-image: url("../res/triangle.png");
+}
+
+#rectangle {
+    background-image: url("../res/rectangle.png");
+}
+
+#color-picker {
+    height: 24px;
+    width: 62px;
+
+    margin: 0 5px;
+    align-self: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#color-sample {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 5px;
+    align-self: center;
+    background: black;
+}
+
+#color-text {
+    cursor: default;
+    font-weight: 900;
+    align-self: center;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    user-select: none;
+}
+
+.size {
+    border-radius: 50%;
+    border: 2px solid black;
+
+    margin: 0 5px;
+    align-self: center;
+}
+
+#small {
+    width: 6px;
+    height: 6px;
+}
+
+#medium {
+    width: 12px;
+    height: 12px;
+}
+
+#large {
+    width: 18px;
+    height: 18px;
+}
+
+.separator {
+    width: 2px;
+    height: 32px;
+    background: rgba(100, 100, 100, 0.3);
+    align-self: center;
+}
+
+.color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    margin: 0 5px;
+    align-self: center;
+}

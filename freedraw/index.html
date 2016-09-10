@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Draw</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<header>
+    <div class="header-wrapper">
+        <h2>Draw</h2>
+    </div>
+</header>
+
+
+<div id="content">
+
+    <div class="game-wrapper">
+
+        <div class="canvas-wrapper">
+            <canvas id="canvas" class="canvas" width="1280" height="720"></canvas>
+            <canvas id="tmp-canvas" class="canvas" width="1280" height="720"></canvas>
+        </div>
+
+        <div id="tools">
+            <div class="tool-block">
+                <div id="undo" class="tool grow"></div>
+                <div id="clear" class="tool grow"></div>
+            </div>
+            <div class="separator"></div>
+            <div class="tool-block">
+                <div id="small" class="size grow"></div>
+                <div id="medium" class="size grow"></div>
+                <div id="large" class="size grow"></div>
+            </div>
+            <div class="separator"></div>
+            <div class="tool-block">
+                <div id="pencil" class="tool grow"></div>
+                <div id="eraser" class="tool grow"></div>
+                <div id="paint-bucket" class="tool grow"></div>
+                <div id="eyedropper" class="tool grow"></div>
+                <div id="line" class="tool grow"></div>
+                <div id="circle" class="tool grow"></div>
+                <div id="triangle" class="tool grow"></div>
+                <div id="rectangle" class="tool grow"></div>
+            </div>
+            <div class="separator"></div>
+            <div class="tool-block ">
+                <div id="color-sample"></div>
+                <div id="color-text">color</div>
+            </div>
+            <div class="tool-block ">
+                <div style="background: #000000" class="color grow" onclick="game.draw.change.color('#000000')"></div>
+                <div style="background: #ffffff" class="color grow" onclick="game.draw.change.color('#ffffff')"></div>
+                <div style="background: #ffff00" class="color grow" onclick="game.draw.change.color('#ffff00')"></div>
+                <div style="background: #ff7d00" class="color grow" onclick="game.draw.change.color('#ff7d00')"></div>
+                <div style="background: #ff0000" class="color grow" onclick="game.draw.change.color('#ff0000')"></div>
+                <div style="background: #ff00ff" class="color grow" onclick="game.draw.change.color('#ff00ff')"></div>
+                <div style="background: #aa00ff" class="color grow" onclick="game.draw.change.color('#aa00ff')"></div>
+                <div style="background: #0000ff" class="color grow" onclick="game.draw.change.color('#0000ff')"></div>
+                <div style="background: #00ffff" class="color grow" onclick="game.draw.change.color('#00ffff')"></div>
+                <div style="background: #00ff00" class="color grow" onclick="game.draw.change.color('#00ff00')"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/lib/jquery-3.1.0.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/color.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
