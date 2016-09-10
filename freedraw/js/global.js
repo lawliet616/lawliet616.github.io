@@ -12,20 +12,16 @@ var Tool = {
 var Size = {
     S: {
         name: "small",
-        value: 5
+        value: 4
     },
     M: {
         name: "medium",
-        value: 10
+        value: 12
     },
     L: {
         name: "large",
-        value: 15
+        value: 22
     }
 };
 
-var Color = {
-    WHITE: "#FFFFFF"
-};
-
-var debug = false;
+var debug = true;

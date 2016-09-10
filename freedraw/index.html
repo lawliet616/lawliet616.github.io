@@ -11,64 +11,74 @@
 
 <body>
 
-<header>
-    <div class="header-wrapper">
-        <h2>Draw</h2>
-    </div>
-</header>
-
-
 <div id="content">
 
-    <div class="game-wrapper">
+    <div class="container row">
 
-        <div class="canvas-wrapper">
-            <canvas id="canvas" class="canvas" width="1280" height="720"></canvas>
-            <canvas id="tmp-canvas" class="canvas" width="1280" height="720"></canvas>
+        <div class="container column">
+
+            <div class="canvas-wrapper">
+                <canvas id="canvas" class="canvas" width="800" height="700"></canvas>
+                <canvas id="tmp-canvas" class="canvas" width="800" height="700"></canvas>
+            </div>
+
+            <div class="tools">
+                <div class="tool-block">
+                    <div id="undo" class="tool grow"></div>
+                    <div id="clear" class="tool grow"></div>
+                </div>
+                <div class="separator"></div>
+                <div class="tool-block">
+                    <div id="small" class="size grow"></div>
+                    <div id="medium" class="size grow"></div>
+                    <div id="large" class="size grow"></div>
+                </div>
+                <div class="separator"></div>
+                <div class="tool-block">
+                    <div id="pencil" class="tool grow"></div>
+                    <div id="eraser" class="tool grow"></div>
+                    <div id="paint-bucket" class="tool grow"></div>
+                    <div id="eyedropper" class="tool grow"></div>
+                    <div id="line" class="tool grow"></div>
+                    <div id="circle" class="tool grow"></div>
+                    <div id="triangle" class="tool grow"></div>
+                    <div id="rectangle" class="tool grow"></div>
+                </div>
+                <div class="tool-block ">
+                    <div id="color-text">current color</div>
+                    <div id="color-sample"></div>
+                </div>
+            </div>
+
         </div>
 
-        <div id="tools">
-            <div class="tool-block">
-                <div id="undo" class="tool grow"></div>
-                <div id="clear" class="tool grow"></div>
-            </div>
-            <div class="separator"></div>
-            <div class="tool-block">
-                <div id="small" class="size grow"></div>
-                <div id="medium" class="size grow"></div>
-                <div id="large" class="size grow"></div>
-            </div>
-            <div class="separator"></div>
-            <div class="tool-block">
-                <div id="pencil" class="tool grow"></div>
-                <div id="eraser" class="tool grow"></div>
-                <div id="paint-bucket" class="tool grow"></div>
-                <div id="eyedropper" class="tool grow"></div>
-                <div id="line" class="tool grow"></div>
-                <div id="circle" class="tool grow"></div>
-                <div id="triangle" class="tool grow"></div>
-                <div id="rectangle" class="tool grow"></div>
-            </div>
-            <div class="separator"></div>
-            <div class="tool-block ">
-                <div id="color-sample"></div>
-                <div id="color-text">color</div>
-            </div>
-            <div class="tool-block ">
-                <div style="background: #000000" class="color grow" onclick="game.draw.change.color('#000000')"></div>
-                <div style="background: #ffffff" class="color grow" onclick="game.draw.change.color('#ffffff')"></div>
-                <div style="background: #ffff00" class="color grow" onclick="game.draw.change.color('#ffff00')"></div>
-                <div style="background: #ff7d00" class="color grow" onclick="game.draw.change.color('#ff7d00')"></div>
-                <div style="background: #ff0000" class="color grow" onclick="game.draw.change.color('#ff0000')"></div>
-                <div style="background: #ff00ff" class="color grow" onclick="game.draw.change.color('#ff00ff')"></div>
-                <div style="background: #aa00ff" class="color grow" onclick="game.draw.change.color('#aa00ff')"></div>
-                <div style="background: #0000ff" class="color grow" onclick="game.draw.change.color('#0000ff')"></div>
-                <div style="background: #00ffff" class="color grow" onclick="game.draw.change.color('#00ffff')"></div>
-                <div style="background: #00ff00" class="color grow" onclick="game.draw.change.color('#00ff00')"></div>
-            </div>
+
+        <div class="colors">
+            <div style="background: #000000" class="color grow" onclick="game.draw.change.color('#000000')"></div>
+            <div style="background: #ffffff" class="color grow" onclick="game.draw.change.color('#ffffff')"></div>
+            <div style="background: #FFEB3B" class="color grow" onclick="game.draw.change.color('#FFEB3B')"></div>
+            <div style="background: #FFC107" class="color grow" onclick="game.draw.change.color('#FFC107')"></div>
+            <div style="background: #FF9800" class="color grow" onclick="game.draw.change.color('#FF9800')"></div>
+            <div style="background: #FF5722" class="color grow" onclick="game.draw.change.color('#FF5722')"></div>
+            <div style="background: #E53935" class="color grow" onclick="game.draw.change.color('#E53935')"></div>
+            <div style="background: #E91E63" class="color grow" onclick="game.draw.change.color('#E91E63')"></div>
+            <div style="background: #9C27B0" class="color grow" onclick="game.draw.change.color('#9C27B0')"></div>
+            <div style="background: #673AB7" class="color grow" onclick="game.draw.change.color('#673AB7')"></div>
+            <div style="background: #3F51B5" class="color grow" onclick="game.draw.change.color('#3F51B5')"></div>
+            <div style="background: #2196F3" class="color grow" onclick="game.draw.change.color('#2196F3')"></div>
+            <div style="background: #03A9F4" class="color grow" onclick="game.draw.change.color('#03A9F4')"></div>
+            <div style="background: #00BCD4" class="color grow" onclick="game.draw.change.color('#00BCD4')"></div>
+            <div style="background: #009688" class="color grow" onclick="game.draw.change.color('#009688')"></div>
+            <div style="background: #4CAF50" class="color grow" onclick="game.draw.change.color('#4CAF50')"></div>
+            <div style="background: #8BC34A" class="color grow" onclick="game.draw.change.color('#8BC34A')"></div>
+            <div style="background: #CDDC39" class="color grow" onclick="game.draw.change.color('#CDDC39')"></div>
+            <div style="background: #795548" class="color grow" onclick="game.draw.change.color('#795548')"></div>
+            <div style="background: #9E9E9E" class="color grow" onclick="game.draw.change.color('#9E9E9E')"></div>
+            <div style="background: #607D8B" class="color grow" onclick="game.draw.change.color('#607D8B')"></div>
         </div>
 
     </div>
+
 </div>
 
 <script src="js/lib/jquery-3.1.0.min.js"></script>

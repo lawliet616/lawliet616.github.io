@@ -1,5 +1,5 @@
 body {
-    padding-top: 3.5em;
+    padding-top: 8px;
     background-color: #f4f4f4;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -26,101 +26,89 @@ h4 {
     font-size: 20px;
 }
 
-.header-wrapper {
-    margin: 0 auto;
-    width: 1280px;
-}
-
-/* Header */
-
-header {
-    display: -webkit-flex;
-    display: flex;
-    -moz-justify-content: space-between;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    background-color: #ffffff;
-    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
-    left: 0;
-    height: 3.5em;
-    line-height: 3.5em;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-}
-
-header h2 {
-    letter-spacing: 6px;
-    float: left;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-header nav {
-    float: right;
-}
-
-header nav ul li {
-    display: inline-block;
-    font-size: 20px;
-    float: left;
-}
-
-header nav ul li:last-child {
-
-}
-
-header nav ul li a {
-    text-transform: uppercase;
-    margin-right: 30px;
-}
-
-header nav ul li a:hover {
-    color: #69d2e7;
-}
-
 #content {
-    padding: 30px 0;
+    margin: 0 auto;
     text-align: center;
+    width: 1260px;
+    height: 760px;
 }
 
-.game-wrapper {
-    text-align: center;
-    margin: 0 auto;
-    width: 1312px;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .canvas-wrapper {
     position: relative;
-    width: 1280px;
-    height: 720px;
+    width: 800px;
+    height: 700px;
     background: #fff;
     border: solid 1px rgba(160, 160, 160, 0.3);
-    border-radius: 10px;
+    border-radius: 8px;
+    align-self: flex-start;
 }
 
 .canvas {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-#tools {
-    margin-top: 5px;
-    width: 1280px;
-    height: 50px;
+.colors {
+    width: 44px;
+    height: 750px;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    border-radius: 8px;
+    background: white;
+    align-self: flex-start;
+    margin-left: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    cursor: pointer;
+}
+
+.color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    margin: 4px 0;
+    align-self: center;
+}
+
+.color:first-child {
+    margin-top: 8px;
+}
+
+.color:last-child {
+    margin-bottom: 8px;
+}
+
+.tools {
+    margin-top: 2px;
+    width: 800px;
+    height: 44px;
     background: #fff;
     border: solid 1px rgba(160, 160, 160, 0.3);
-    border-radius: 10px;
+    border-radius: 8px;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
-    cursor: hand;
 }
 
 .tool-block {
@@ -129,6 +117,14 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
+    align-self: center;
+    cursor: pointer;
+}
+
+.tool-block:last-child {
+    padding: 0 5px 0 185px;
+    cursor: default;
 }
 
 .tool {
@@ -189,32 +185,22 @@ header nav ul li a:hover {
     background-image: url("../res/rectangle.png");
 }
 
-#color-picker {
-    height: 24px;
-    width: 62px;
-
-    margin: 0 5px;
-    align-self: center;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
 #color-sample {
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    border: 1px solid black;
-    margin-right: 5px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
     align-self: center;
     background: black;
+    margin-right: 5px;
 }
 
 #color-text {
+    white-space: nowrap;
     cursor: default;
     font-weight: 900;
     align-self: center;
+    margin: 0 10px 0 25px;
 
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
@@ -249,17 +235,8 @@ header nav ul li a:hover {
 
 .separator {
     width: 2px;
-    height: 32px;
+    height: 28px;
     background: rgba(100, 100, 100, 0.3);
     align-self: center;
-}
-
-.color {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-
-    border: 1px solid rgba(100, 100, 100, 0.3);
-    margin: 0 5px;
-    align-self: center;
+    cursor: pointer;
 }

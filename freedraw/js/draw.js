@@ -20,6 +20,7 @@ game.draw = (function () {
     var actions = [];
     var action = [];
     var painting = false;
+    var shouldFill = true;
 
     var mainLoopToken;
 
@@ -121,27 +122,36 @@ game.draw = (function () {
      * Saves the action object to the action array.
      */
     var saveAction = function () {
-        // paint default shape if the user just clicked
-        if ((action.tool == Tool.RECTANGLE || tool == Tool.CIRCLE || tool == Tool.LINE)
-            && action.points.length == 1) {
+        if (!shouldFill && tool == Tool.PAINT_BUCKET) {
+            action = [];
+            return;
+        }
 
-            if (tool == Tool.CIRCLE) {
-                action.points.push({
-                    x: action.points[0].x + defaults.size.value * 2,
-                    y: action.points[0].y + defaults.size.value * 2
-                });
-            } else {
-                action.points.push({
-                    x: action.points[0].x + defaults.size.value * 4,
-                    y: action.points[0].y + defaults.size.value * 4
-                });
+        // paint default shape if the user just clicked
+        if (action.points.length == 1 || (action.points.length == 2 && comparePoints(action.points[0], action.points[1]))) {
+
+            switch (tool) {
+                case Tool.CIRCLE:
+                case Tool.TRIANGLE:
+                    action.points[1] = {
+                        x: action.points[0].x + defaults.size.value * 2,
+                        y: action.points[0].y + defaults.size.value * 2
+                    };
+                    break;
+                case Tool.RECTANGLE:
+                case Tool.LINE:
+                    action.points[1] = {
+                        x: action.points[0].x + defaults.size.value * 4,
+                        y: action.points[0].y + defaults.size.value * 4
+                    };
             }
-            paintAction(action);
         }
         if (debug) console.log("Save:", action);
 
+        paintAction(action);
         saveTemp();
         actions.push(action);
+
         action = [];
     };
 
@@ -261,8 +271,8 @@ game.draw = (function () {
 
         tmp_ctx.lineJoin = "round";
         tmp_ctx.lineCap = "round";
-        tmp_ctx.strokeStyle = a.tool == Tool.PENCIL ? game.color.rgbColorToHex(a.color) : Color.WHITE;
-        tmp_ctx.fillStyle = a.tool == Tool.PENCIL ? game.color.rgbColorToHex(a.color) : Color.WHITE;
+        tmp_ctx.strokeStyle = a.tool == Tool.PENCIL ? game.color.rgbColorToHex(a.color) : "#fff";
+        tmp_ctx.fillStyle = a.tool == Tool.PENCIL ? game.color.rgbColorToHex(a.color) : "#fff";
         tmp_ctx.lineWidth = a.size;
 
         if (length < 3) {
@@ -410,6 +420,7 @@ game.draw = (function () {
      * @param a
      */
     var paintRegion = function (a) {
+        shouldFill = true;
         var posX = a.points[0].x;
         var posY = a.points[0].y;
 
@@ -422,6 +433,7 @@ game.draw = (function () {
         };
 
         if (sColor.r === a.color.r && sColor.g === a.color.g && sColor.b === a.color.b) {
+            shouldFill = false;
             return;
         }
 
@@ -603,7 +615,7 @@ game.draw = (function () {
             case Size.L:
                 game.core.tools[size.name].css("border-color", "black");
                 game.core.tools[s.name].css("border-color", "rgb(195, 75, 75)");
-                console.log("New size: " + s);
+                console.log("New size: " + s.name);
                 size = s;
         }
     };
