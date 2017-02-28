@@ -1,12 +1,2 @@
-body {
-  background-color: #fcfcfc;
-  font-family: "Roboto", "Open Sans", sans-serif;
-  color: black; }
-
-app {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-/*# sourceMappingURL=app.css.map*/
+body{background-color:#fcfcfc;font-family:Roboto,Open Sans,sans-serif;color:#000}app{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+/*# sourceMappingURL=app.map*/
